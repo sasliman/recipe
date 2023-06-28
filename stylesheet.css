@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+html {
+    background-color: rgba(122, 191, 191, 0.5);
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h3 {
+    font-size: 25px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+nav a, nav span, menu li button, #social li, footer {
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+p, dd, li, nav, input {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+dt {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 414px) {
+    body {
+        width: 414px;
+        margin: 0 auto;
+    }
+
+    section.main-nav {
+        position: fixed;
+        top: 0;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+
+    label span {
+        background-color: #ffffff;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 18px;
+    }
+
+    label span:before, label span:after {
+        background: #ffffff;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+
+    label span:before {
+        top: 5px;
+    }
+
+    label span:after {
+        top: -5px;
+    }
+
+    input {
+        display: none;
+    }
+
+    input:checked ~ ul {
+        max-height: 500px;
+    }
+
+    input:checked ~ label span {
+        background: transparent;
+    }
+
+    input:checked ~ label span:before {
+        transform: rotate(-45deg);
+    }
+
+    input:checked ~ label span:after {
+        transform: rotate(45deg);
+    }
+
+    input:checked ~ label:not(.steps) span:before, input:unchecked ~ label:not(.steps) span:after {
+        top: 0;
+    }
+
+    section.main-nav > h2 {
+        font-size: 0;
+        width: 1px;
+        height: 1px;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    header {
+        padding-top: 500px;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    
+    body {
+        width: 1280px;
+        margin: 0 auto;
+    }
+    
+    section.main-nav {
+        position: fixed;
+        top: 0;
+    }
+
+    #logo, li>a[href="top"] {
+        position: fixed;
+        top: 0;
+        left: 310px;
+        background-color: #eb5428;
+        padding: 15px;
+    }
+
+    li>a[href="top"] {
+        left: 0;
+    }
+    
+    nav.main-nav ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 550px;
+        margin-left: 300px;
+        margin-top:25px;
+        width: 50%;
+    }
+
+    .title {
+        margin-left: 0;
+        margin-right: 650px;
+    }
+
+    label span, input {
+         display: none;
+    }
+
+    nav.main-nav img {
+        display: flex;
+        
+    }
+}
